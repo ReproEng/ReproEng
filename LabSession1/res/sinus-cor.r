@@ -1,3 +1,5 @@
+## SPDX-License-Identifier: MIT-0 
+
 ## R 101:
 ## * Variables are vectors by default
 ## * Standard data structure is a data frame ("table" with names columns and rows)
