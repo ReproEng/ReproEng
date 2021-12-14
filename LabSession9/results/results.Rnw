@@ -1,0 +1,27 @@
+\documentclass{scrartcl}
+\usepackage{hyperref}
+\setlength{\parindent}{0pt}
+
+\title{Benchmarking SQPolite with Clessbench}
+\author{Stefan Klessinger \\ \href{mailto:stefan.klessinger@uni-passau.de}{stefan.klessinger@uni-passau.de}}
+\begin{document}
+\maketitle
+\section*{Introduction}
+This document visualizes the results of performing benchmarks with clessbench on SQPolite with various settings.
+<<setup, echo=FALSE, cache=TRUE>>=
+library(ggplot2)
+@
+
+\section*{Results}
+% Copy and adapt this part for your different results and add a proper caption, as well as a description in the text for each figure.
+
+<<plot2,  fig.pos="h", out.extra='', fig.height=4, fig.cap="\\label{fig:results}Plot of benchmark results with [...]", echo=FALSE, cache=TRUE>>=
+res <- read.delim("results.txt", header = FALSE)
+
+ggplot(res, aes(x=V1, y=V2)) +
+  geom_point(size=1) +
+  labs(x = "Request Number", y = "Time [ms]")
+@
+
+A description of the results presented in \autoref{fig:results}
+\end{document}
